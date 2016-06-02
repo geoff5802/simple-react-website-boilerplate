@@ -6,7 +6,8 @@ import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
 const navObj = {
   title: 'Big Room Studios',
   subtitle: 'Creative/Technology',
-  logo: 'images/logo-transparent.png'
+  logo: 'images/logo-transparent.png',
+  url: 'http://bigroomstudios.com'
 };
 
 const styleSheet = {
@@ -20,9 +21,11 @@ class Navigation extends React.Component {
     return(
       <Navbar inverse fixedTop fluid>
         <Navbar.Header>
-          <Navbar.Brand>
-          <img src={navObj.logo} style={styleSheet}/>
-          </Navbar.Brand>
+          <a href={navObj.url} target='blank'>
+            <Navbar.Brand>
+              <img src={navObj.logo} style={styleSheet}/>
+            </Navbar.Brand>
+          </a>
           <Navbar.Toggle />
         </Navbar.Header>
         <Navbar.Collapse>

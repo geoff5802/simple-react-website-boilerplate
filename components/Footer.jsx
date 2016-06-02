@@ -3,7 +3,8 @@
 import React from 'react';
 
 const footerObj = {
-  image: './images/logo-transparent.png'
+  image: './images/logo-transparent.png',
+  url: 'http://bigroomstudios.com/'
 };
 
 class Footer extends React.Component {
@@ -24,7 +25,7 @@ class Footer extends React.Component {
     return (
       <div style={styleSheet}>
         <footer style={footerStyle}>
-          <img src={footerObj.image} style={{height: '100px'}}/>
+          <a href={footerObj.url} target='_blank'><img src={footerObj.image} style={{height: '100px'}}/></a>
         </footer>
       </div>
     );
